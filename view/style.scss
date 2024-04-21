@@ -1,0 +1,11 @@
+$bgcolor: grey;
+$bgcolor1:black;
+
+$margintop: 10%;
+body{
+    margin-top: $margintop;
+     
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+ background:linear-gradient($bgcolor,$bgcolor1);
+ }

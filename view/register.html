@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <script >
+    let re1 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+let re2 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+let re3 = /^[0-9]{10}$/;
+function Validate(){
+form.addEventListener('submit',(e)=> {
+if(re1.test(password.value))
+{
+    return true;
+    
+}
+else{
+    alert("Invalid Password");
+    password.style.border = "red solid 3px";
+    e.preventDefault();
+    
+}
+
+if(username.value.length >= 15)
+{
+    alert("Username length out of Bounds");
+    username.style.border = "red solid 3px";
+    
+    e.preventDefault();
+}
+else{
+    return true;
+}
+
+if(re2.test(email.value) != true)
+{
+    alert("Ivalid email id");
+    email.style.border = "red solid 3px";
+    e.preventDefault();
+    
+}
+else{
+    return true;
+}
+
+if(re3.test(phonenumber.value) != true)
+{
+    alert("invalid Phone Number");
+    phonenumber.style.border = "red solid 3px";
+    e.preventDefault();
+    
+}
+else
+{
+    return true;
+}
+
+})} </script>
+</head>
+<body>
+    <h1 id="h1">QUIZARDS REGISTRATION</h1>
+    <div class="fom">
+        <form  name="Regform" action="savedata" id="form" method="POST">
+            <div>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="first name"  pattern="[A-Z a-z 0-9]+" required>
+            </div><br>
+            <div>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" placeholder="last name" pattern="[A-Z a-z 0-9]+" required>
+            </div><br>
+            <div>
+                <label for="bdate">Date of Birth</label>
+                <input type="date" id="bdate">
+            </div><br>
+            <div>
+                <label for="study">Studying: </label>
+                <input type="checkbox"  id="primary">
+                <label for="primary">Primary</label>
+                
+                <input type="checkbox"  id="Secondary">
+                <label for="Secondary">Secondary</label>
+               
+                <input type="checkbox"  id="Undergraduate">
+                <label for="Undergraduate">Undergraduate</label>
+                
+                <input type="checkbox"  id="Postgraduate">
+                <label for="Postgraduate">Postgraduate</label>
+                
+                </div><br>
+           
+            <div>
+                <label for="student">School/College/Institution name</label>
+                <input type="text" id="student" pattern="[A-Za-z]+" required>
+            </div>
+            <div>
+                <label  for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" required>
+                <label  id="male" for="male">Male</label>
+                <input type="radio" id="female" name="gender" required>
+                <label id="female" for="female">Female</label>
+                
+            </div><br>
+            <div>
+            <label for="uname">Username</label>
+            <input type="text" id="uname" name="uname" placeholder="username max 12 characters"  maxlength="12" required>
+            </div><br>
+            <div>
+            <label for="Pass" id="p">Password</label>
+            <input type="password" id="Pass" name="Pass" maxlength="15">
+            </div><br>
+            <div>
+            <label for="Email" id="p">E-mail</label>
+            <input type="email" id="Email" placeholder="user@gmail.com" name="Email" required>
+            </div><br>
+            <div>
+                <label for="state">Your State</label>
+                <select id="state">
+                <option>Tamil Nadu</option>
+                <option>Andhra Pradesh </option>
+                <option>Karnataka</option>
+                </select>
+            </div><br>
+            <div>
+                <label for="Ph">Phone Number</label>
+                <input type="tel" id="Ph" placeholder="+91" required>
+            </div><br>
+            <div>
+                <label for="Address">Address:</label><br>
+                <textarea name="Address" rows="4" cols="50">Enter Address..</textarea>
+
+            </div><br>
+            <div class="submit">
+                
+                <input type="submit" onclick="Validate()">
+                <input type="reset">
+            </div>
+            </form>
+            
+        </div>
+</body>
+</html>

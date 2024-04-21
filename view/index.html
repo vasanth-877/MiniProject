@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+        
+   
+        $(".Box").click(function(){
+            $(".Box").css("background","Tomato");
+        $("#myBox").text("Ouch 😞");
+        });
+        $(".Box").dblclick(function(){
+            $(".Box").css("background","pink");
+           $("#myBox").text("Noice 😊");
+        });
+        $("#login").mouseenter(function(){
+            $(this).css("color","green");
+        });
+        $("#login").mouseout(function(){
+            $(this).css("color","white");
+        });
+        $("#register").mouseenter(function(){
+            $(this).css("color","red");
+        });
+        $("#register").mouseout(function(){
+            $(this).css("color","white");
+        });
+        $("#about").click(function loadDoc(){
+            var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     let us = document.getElementById("us");
+     us.hidden=false;
+     us.innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+        });
+        $("#about").dblclick(function(){
+            $("#us").slideUp("slow");
+        });
+       }); 
+    </script>
+</head>
+<body>
+   <h1 id="about">About US</h1>
+   <div id="us" hidden>
+        
+    </div> 
+   <h>Welcome To Quizards!</h>
+   
+   <img src="questionmark.png" height="200" class="img">
+   
+    <a href="login.html" >
+        <h3 id="login">Login</h3> </a>
+    <a href="register.html">
+        <h3 id="register">Register</h3>
+    </a>
+    
+    <div id="myBox" title="click once if you rate us average or twice if you rate us good" class="Box">
+        Rate us
+         click here 👆
+        </div>
+    
+   
+</body>
+</html>

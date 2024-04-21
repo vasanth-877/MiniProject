@@ -1,0 +1,60 @@
+body{
+    margin-top: 10px;
+     background:linear-gradient(grey,black);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+ 
+}
+.username{
+    margin-top: 200px;
+    margin-left: 30%;
+}
+
+#user{
+    border: 5px solid;
+    height: 40px;
+    width: 400px;
+   font-size:20px ;
+    
+}
+#l1
+{
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: white;
+    left: 2px;
+}
+#l2{
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: white;
+    left: 2px;
+    
+}
+#password{
+    border: 5px solid;
+    height: 40px;
+    width: 400px;
+   font-size:20px ;
+    
+}
+#b1{
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    background-color: lawngreen;
+}
+#b1:hover{
+    background-color:green;
+}
+#b2{
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+   background-color: lawngreen;
+}
+#b2:hover{
+    background-color: green;
+}
